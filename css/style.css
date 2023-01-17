@@ -1,0 +1,394 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+:root{
+    --bg-color:rgb(255 219 137 / 100%);;
+    --main-color:#DC0000;
+    --font-color:#674747;
+
+}
+body{
+    font-family: 'Work Sans', sans-serif;
+}
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.main-title{
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--main-color);
+    margin: 20px 0 10px 0;
+}
+.main-desc{
+    text-transform: capitalize;
+    font-weight: 500;
+    color: var(--font-color);
+    margin: 10px 0 20px 0;
+}
+
+/*navigation section*/
+.header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-color);
+}
+.header .container .nav-bar i{
+    display: none;
+}
+.header .container .nav-bar{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-end;
+}
+.header .container ul{
+    list-style: none;
+    display: flex;
+}
+.header .container ul li{
+    margin-left: 10px;
+}
+.header .container ul li a{
+    text-decoration: none;
+    color: var(--main-color);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+@media (max-width:765px) {
+    .header .container ul{
+        display: none;
+    }
+    
+    .header .container .nav-bar i{
+        display: block;
+    }
+    .header .container .nav-bar .toggle-menu:hover + ul{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 7%;
+        left: 0px;
+        width: 100%;
+        background-color: rgb(0 0 0 / 50%);
+        z-index: 100;
+        padding: 0;
+    }
+    .header .container .nav-bar ul li{
+        padding: 15px !important;
+    }
+}
+
+.header .container .logo h1{
+    text-transform: uppercase;
+    color: var(--font-color);
+    font-size: 30px;
+    font-weight: 600;
+}
+.header .container .logo h1 span{
+    color: var(--main-color);
+}
+/*landing section*/
+.landing{
+    background-image: url(../images/wallpapersden.com_purple-sunrise-4k-vaporwave_1366x768.jpg);
+    background-image: url(../images/Og5BVFEY.jpg);
+    background-size: 100% 100%;
+    height: calc(100vh - 74px);
+    position: relative;
+}
+.landing .text-box{
+    position: absolute;
+    left: 33%;
+    top: 33%;
+    font-size: 28px;
+}
+@media (max-width:765px) {
+    .landing .text-box{
+        width: 100%;
+        left: 0;
+    }
+    .landing .text-box h1,
+    .landing .text-box p{
+        text-align: center;
+    }
+}
+.landing .text-box::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+    opacity: 50%;
+}
+.landing .text-box h1{
+    color: var(--main-color);
+    text-transform: capitalize;
+    position: relative;
+    margin: 37px 10px;
+}
+.landing .text-box p{
+    position: relative;
+    text-transform: capitalize;
+    color: #674747;
+    padding-left: 16px;
+    font-weight: 700;
+}
+/*skills*/
+.skills{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    background-color: var(--bg-color);
+}
+
+.skills .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* .skills .container h3{
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--main-color);
+    margin: 20px 0 10px 0;
+}
+.skills .container p{
+    text-transform: capitalize;
+    font-weight: 500;
+    color: var(--font-color);
+    margin: 10px 0 20px 0;
+} */
+.skills .container .progress-box{
+    margin: 12px 0;
+}
+.skills .container .progress-box h4{
+    margin: 15px 0 0px 0;
+    text-transform: uppercase;
+    color: var(--font-color);
+}
+.skills .container .progress-box .progress{
+    height: 20px;
+    background-color: #dedadc;
+    width: 370px;
+}
+@media (max-width:765px){
+    .skills .container .progress-box{
+        width: 90%;
+    }
+    .skills .container .progress-box .progress{
+        width: 100%;
+    }
+}
+
+.skills .container .progress-box .progress span{
+    display: block;
+    height: 100%;
+    background-color: var(--main-color);
+    position: relative;
+}
+.skills .container .progress-box .progress span i{
+    position: absolute;
+    left: -20px;
+    font-size: 20px;
+}
+
+.skills .container .progress-box .progress span::before{
+    content: attr(data-progress);
+    color: white;
+    position: absolute;
+    right: -25px;
+    top: -31px;
+    background-color: black;
+    padding: 3px 0;
+    border-radius: 2px
+}
+.skills .container .progress-box .progress span::after{
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+    border-width: 7px;
+    right: -7px;
+    top: -7px;
+}
+/*project section*/
+.project{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-image: url(../images/wallpapersden.com_coronavirus-pandemic_1336x768.jpg);
+    background-size: 100%;
+}
+
+/* .project .container h3{
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--main-color);
+    padding-top: 20px;
+}
+.project .container .text{
+    text-transform: capitalize;
+    font-weight: 500;
+    color: #674747;
+    margin: 10px 0 20px 0;
+} */
+.project .container .project-list{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 60px 0;
+}
+.project .container .project-box{
+    flex-basis: 24%;
+    margin: 0 5px;
+}
+@media (max-width:765px){
+    .project .container .project-list{
+        justify-content: center;
+    }
+    .project .container .project-box{
+        flex-basis: 50%;
+        margin-bottom: 30px;
+    }
+}
+.project .container .project-box .text-box h4{
+    margin: 0;
+    text-transform: capitalize;
+    font-weight: 700;
+    color: var(--main-color);
+}
+.project .container .project-box .text-box p{
+    text-transform: capitalize;
+    font-weight: 600;
+    color: var(--font-color);
+    margin: 10px 0 5px 0;
+}
+
+@media (max-width:765px){
+    .project .container .project-box .text-box p{    
+        padding-bottom: 15px;
+        margin-top: 4px;
+    }
+}
+
+.project .container .project-box a img{
+    width: 100%;
+}
+.project .container .project-box .text-box{
+    background-color: var(--bg-color);
+    opacity: 70%;
+}
+/*about section*/
+.about{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: var(--bg-color);
+    height: 60vh;
+}
+.about .container{
+    position: relative;
+}
+.about .container img{
+    width: 80px;
+    border-radius: 60%;
+}
+.about .container .about-box{
+    position: absolute;
+    background-color: #eee;
+    box-shadow: 7px 9px 20px 1px rgb(0 0 0);
+    width: 52%;
+    padding: 10px;
+    border-radius: 25px;
+    left: 324px;
+    bottom: -248px;
+}
+
+@media (max-width:765px){
+    .about .container .about-box{
+        width: 80%;
+        bottom: -100%;
+        left: 50%;
+        transform: translate(-50%, 70%);
+    }
+}
+
+.about .container .about-box a{
+    text-decoration: none;
+    color: var(--main-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: var(--bg-color);
+    padding: 7px 14px;
+    border-radius: 10%;
+}
+/*contact section*/
+.contact{
+    height: 65vh;
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 20px;
+    background-image: url(../images/wallpapersden.com_python-hack-the-world_1336x768.jpg);
+    background-size: 100% 123%;
+}
+.contact .container{
+    display: flex;
+    flex-direction: column;
+}
+.contact .container .address{
+    margin: 30px 0;
+}
+.contact .container .address h4{
+    margin: 0;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: var(--font-color);
+}
+.contact .container .address .gmail,
+.contact .container .address .phone{
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.contact .container .social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+.contact .container .social a{
+    text-decoration: none;
+    color: var(--main-color);
+    background-color: var(--bg-color);
+    margin: 0 10px;
+    display: flex;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact .container .social a i{
+    font-size: 23px;
+}
+/*footer section*/
+.footer{
+    background-color: var(--bg-color);
+    text-align: center;
+    padding: 10px 0 5px 0;
+    color: var(--font-color);
+    font-size: 18px;
+    font-weight: 600;
+}
+.footer span{
+    color: var(--main-color);
+    font-weight: bold;
+}
