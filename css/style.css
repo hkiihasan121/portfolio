@@ -97,7 +97,6 @@ body{
 }
 /*landing section*/
 .landing{
-    background-image: url(../images/wallpapersden.com_purple-sunrise-4k-vaporwave_1366x768.jpg);
     background-image: url(../images/Og5BVFEY.jpg);
     background-size: 100% 100%;
     height: calc(100vh - 74px);
@@ -105,14 +104,16 @@ body{
 }
 .landing .text-box{
     position: absolute;
-    left: 33%;
-    top: 33%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     font-size: 28px;
+    white-space: nowrap;
 }
-@media (max-width:765px) {
+@media (max-width:800px) {
     .landing .text-box{
         width: 100%;
-        left: 0;
+        white-space: normal;
     }
     .landing .text-box h1,
     .landing .text-box p{
@@ -242,6 +243,7 @@ body{
 .project .container .project-list{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     margin: 60px 0;
 }
 .project .container .project-box{
@@ -249,9 +251,7 @@ body{
     margin: 0 5px;
 }
 @media (max-width:765px){
-    .project .container .project-list{
-        justify-content: center;
-    }
+
     .project .container .project-box{
         flex-basis: 50%;
         margin-bottom: 30px;
@@ -306,14 +306,15 @@ body{
     width: 52%;
     padding: 10px;
     border-radius: 25px;
-    left: 324px;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: -248px;
 }
 
-@media (max-width:765px){
+@media (max-width:800px){
     .about .container .about-box{
         width: 80%;
-        bottom: -100%;
+        bottom: -59%;
         left: 50%;
         transform: translate(-50%, 70%);
     }
