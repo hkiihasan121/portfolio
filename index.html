@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script async src="https://api.countapi.xyz/hit/codefoxx.com/e9051dff-bad9-4261-ad02-056186739a52?callback=websiteVisits"></script>
 </head>
 <body>
     <!--header section-->
@@ -20,6 +21,7 @@
         <div class="container">
             <div class="logo">
                 <h1><i class="fa-sharp fa-solid fa-code"></i><span>h</span>assan <span>o</span>sman</h1>
+                <span id="visits"></span>
             </div>
             <div class="nav-bar">
                 <i class="fas fa-bars toggle-menu"></i>
@@ -228,5 +230,10 @@
     </div>
     <!--footer section-->
     <div class="footer">&copy; 2023 <span>Hassan</span> All Right Reserved</div>
+    <script>
+        function websiteVisits(response) {
+        document.querySelector("#visits").textContent = response.value;
+        }
+    </script>
 </body>
 </html>
